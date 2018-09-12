@@ -4,8 +4,8 @@ title: Create Cucumber tests
 categories:
   - Documentation
 type: Document
-showSidebar: true
-published: true
+showSidebar: false
+published: false
 nav_ordering: 12
 pageTitle: "Create Cucumber tests"
 ---

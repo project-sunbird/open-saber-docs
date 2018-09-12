@@ -4,8 +4,8 @@ title: Installation Notes
 categories:
   - Documentation
 type: Document
-showSidebar: true
-published: true
+showSidebar: false
+published: false
 nav_ordering: 18
 pageTitle: "Installation Notes"
 ---

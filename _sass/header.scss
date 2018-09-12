@@ -140,13 +140,11 @@ header {
 }
 
 .nav-toggle {
-	position: absolute;
-	right: 25px;
 	font-size: 1.6em;
 	line-height: 1em;
 	text-decoration: none;
 	color: #fff;
-	top: 4px;
+	margin-left: auto;
 
 	@media #{$mid-point} {
 		display: none;

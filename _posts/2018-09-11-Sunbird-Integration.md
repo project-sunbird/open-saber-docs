@@ -7,7 +7,8 @@ type: Document
 showSidebar: true
 published: true
 nav_ordering: 7
-pageTitle: "Intergration with Sunbird"
+pageTitle: Intergration with Sunbird
+desc: Instructions to integrate Opensaber with Sunbird
 ---
 
 Instructions to integrate Opensaber with Sunbird can be found [here](http://sunbird.org/developer-docs/opensaber/user_extension/){:target="_blank"}.

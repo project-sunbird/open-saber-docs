@@ -7,7 +7,8 @@ type: Document
 showSidebar: true
 published: true
 nav_ordering: 6
-pageTitle: "API Examples"
+pageTitle: API Examples
+desc: Examples on how to use the APIs.
 ---
 
 ### Open Saber API Examples

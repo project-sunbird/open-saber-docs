@@ -34,7 +34,7 @@
 		margin: 0;
 		list-style: none;
 		width: 100%;
-		column-count: 3;
+		//column-count: 3;
 	}
 
 	li {
@@ -510,12 +510,13 @@ a i.material-icons{
     vertical-align:top;
     display: block;
     
-    span{
+    span.title{
 		position:relative;
 		display: inline-block;
 		max-width: calc(100% - 40px);
 		line-height: 1.5;
 		vertical-align: top;
+		font-size:18px;
 		
 		&::before {
 			content: '';
@@ -539,5 +540,10 @@ a i.material-icons{
 	&:hover span::before, a:focus::before {
 		transform-origin: left top;
 		transform: scale(1, 1);
+	}
+	.icon{
+		svg {
+			height:20px;
+		}
 	}
 }

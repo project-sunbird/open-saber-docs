@@ -7,7 +7,8 @@ type: Document
 showSidebar: true
 published: true
 nav_ordering: 4
-pageTitle: "Creating and Modelling Validations"
+pageTitle: Creating and Modelling Validations
+desc: Details on modelling the data validations for Registry
 ---
 
 ## Overview

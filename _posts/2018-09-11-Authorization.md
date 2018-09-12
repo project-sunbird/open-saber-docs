@@ -4,8 +4,8 @@ title: Authorization
 categories:
   - Documentation
 type: Document
-showSidebar: true
-published: true
+showSidebar: false
+published: false
 nav_ordering: 10
 pageTitle: "Authorization"
 ---

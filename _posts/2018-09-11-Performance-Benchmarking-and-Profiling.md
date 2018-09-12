@@ -4,8 +4,8 @@ title: Performance benchmarking and Profiling
 categories:
   - Documentation
 type: Document
-showSidebar: true
-published: true
+showSidebar: false
+published: false
 nav_ordering: 16
 pageTitle: "Performance benchmarking and Profiling"
 ---

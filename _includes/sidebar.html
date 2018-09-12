@@ -1,0 +1,47 @@
+<section class="sidebar">
+	<div class="logo shadow"><a href="/">{% include logo.html %}</a> </div>
+	<nav class="sidebar-nav">
+		<div class="home-link"><a href="https://opensaber.io/" target="_blank">About OpenSaber</a></div>
+		<div class="home-link"><a href="https://github.com/project-sunbird/open-saber" target="_blank">Github</a></div>
+		{% assign categories = site.categories | sort %}
+		{% for category in categories %}
+			{% assign name = category[0] %}
+			{% assign posts = category[1] %}
+			{% assign size = posts | size %}
+			<div class = 'category-module {% if name == page.categories[0] %}active{% endif %}'>
+				<span class="heading accordion {% if name == page.categories[0] %}active{% endif %}" >{{ name | replace: "-", " " }}</span>
+				<ul class="panel">
+					{% assign tutorials = posts | sort: "nav_ordering" %}
+					{% for tutorial in tutorials  %}
+						{% if tutorial.showSidebar %}
+						{% if tutorial.published %}
+						<li {% if tutorial.url == page.url %}class="active"{% endif %}>
+							<a href="{{ site.baseurl }}{{ tutorial.url }}">{{ tutorial.title }}</a>
+						</li>
+						{% endif %}
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+		{% endfor %}
+	</nav>
+</section>
+<!--<script>
+var acc = $(".accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        $(this).siblings("span.active").removeClass("active");
+
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+
+</script>-->

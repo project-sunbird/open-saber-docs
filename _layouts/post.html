@@ -1,0 +1,85 @@
+---
+layout: default
+---
+{% include sidebar.html %}
+<section class="post">
+	<section class="post-content">
+		{% if page.type == "Video" %}
+			{% include youtube.html video_id=page.video_id %}
+
+			{% if page.resources %}
+				<div class="resources">
+					<ul>
+						{% for resource in page.resources %}
+							<li><a href="{{ resource.link }}">{{ resource.name }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endif %}
+		{% endif %}
+		
+		<div class="tutorial-main">
+			
+			<h1>{{page.pageTitle}}</h1>
+			<hr />
+			{% include meta.html %}
+			{{ content }}
+			<hr />
+			
+		</div>
+		
+	</section>
+	<!--<section class="post-related">
+		{% assign related_posts = site.related_posts %}
+		{% assign related_posts_size = related_posts | size %}
+		{% if related_posts_size > 0 %}
+			<div class="related">
+				<h3>Related articles</h3>
+				{% include listings.html listings=site.related_posts %}
+			</div>
+		{% endif %}
+	</section>-->
+	
+</section>
+
+
+<script src="{{ site.baseurl }}/js/main.js"></script>
+
+<script>
+	var headings = document.querySelectorAll("h2[id]");
+
+	console.log(headings);
+	for (var i = 0; i < headings.length; i++) {
+		var anchorLink = document.createElement("a");
+		anchorLink.innerText = "#";
+		anchorLink.href = "#" + headings[i].id;
+		anchorLink.classList.add("header-link");
+
+		headings[i].appendChild(anchorLink);
+	}
+
+	$(".modalOpen").click(function() {
+		var id = $(this).attr("href");
+		$(id).addClass("show");
+
+		$(window).click(function() {
+			$(".show").removeClass("show");
+		});
+
+		$(id + " > div").click(function(event){
+			event.stopPropagation();
+		});
+		return false;
+	});
+
+	$(".close").click(function() {
+		$(".show").removeClass("show");
+		return false;
+	});
+
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) {
+			$(".show").removeClass("show");
+		}
+	});
+</script>

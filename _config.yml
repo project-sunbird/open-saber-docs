@@ -1,0 +1,68 @@
+title: OpenSaber
+url: "http://docs.opensaber.io/"
+baseurl:
+google_analytics_key:
+disqus_shortname:
+newsletter_action:
+logo: /logo.png
+description: 
+author:
+  name:
+  email: 
+  twitter:
+social:
+  name: 
+  links:
+    - http://docs.opensaber.io/
+permalink: /:slug:output_ext
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+collections:
+  sets:
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+  -
+    scope:
+      type: "sets"
+    values:
+      _hide_content: true
+  -
+    scope:
+      path: "index.html"
+    values:
+      body_class: "show_hero_search"
+
+social_icons:
+  - Facebook
+  - Google Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - Email
+  - RSS
+
+types:
+  - Document
+  - Video
+
+_comments:

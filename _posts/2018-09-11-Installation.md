@@ -73,7 +73,7 @@ Edit the configuration files or create your own custom configuration files and c
 
 #### 3 - Running the Registry
 
-All dependencies are now installed. All required sample configuration files are also created and if you don't want to change anything, you may simply follow the following steps to start up an opensaber instance as a Teacher Registry.
+All dependencies are now installed. All required sample configuration files are also created and if you don't want to change anything, you may simply follow the following steps to start up an OpenSaber instance as a Teacher Registry.
 
 ##### Running using docker
 
@@ -110,7 +110,7 @@ Below mentioned configuration files should be created in [src/main/resources](ht
 
 #### Property Configurations in Detail
 
-The following is a list of configuration options which can be tailored for a specific instance of Opensaber. All these properties are environment variables and hence can be configured either in .bashrc or in Windows environment properties. Most of the properties have sensible defaults.
+The following is a list of configuration options which can be tailored for a specific instance of OpenSaber. All these properties are environment variables and hence can be configured either in .bashrc or in Windows environment properties. Most of the properties have sensible defaults.
 
 1. **perf_monitoring_enabled** - This property is used to enable/disable performance instrumentation to performance tune various APIs.
 
@@ -120,9 +120,9 @@ The following is a list of configuration options which can be tailored for a spe
 
 4. **config_schema_file** - The fully qualified filename with the `file://` protocol prefix for configuring fields that need to be encrypted. The default filename will be `schema-configuration.jsonld` and will be loaded from the classpath. This file will be in JSON-LD format.
 
-5. **database_provider** - The storage database provider for the Opensaber instance. The default database will be `NEO4J`.
+5. **database_provider** - The storage database provider for the OpenSaber instance. The default database will be `NEO4J`.
 
-6. **database_embedded** - Set this property to `true` to enable running an embedded Neo4J instance with Opensaber.
+6. **database_embedded** - Set this property to `true` to enable running an embedded Neo4J instance with OpenSaber.
 
 7. **database_directory** - Set this property to a directory path if an embedded Neo4J instance is used.
 
@@ -174,7 +174,7 @@ Create a domain specific vocabulary file for the application. Sample vocabulary 
 
 #### Testing the APIs
 
-[Open Saber API specs](/api-specs.html) and [Open Saber API Examples](/api-examples.html) give detailed descriptions on how to use the APIs in Registry.
+[OpenSaber API specs](/api-specs.html) and [OpenSaber API Examples](/api-examples.html) give detailed descriptions on how to use the APIs in Registry.
 
 
 

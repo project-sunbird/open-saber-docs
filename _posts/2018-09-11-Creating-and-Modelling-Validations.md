@@ -13,7 +13,7 @@ desc: Details on modelling the data validations for Registry
 
 ## Overview
 
-Data validation is a key part of every application. An application should be capable of verifying the data that is sent to it. After verifying the data, if the data is valid, it should allow the request to be processed and if not, respond with an appropriate message. Currently in Opensaber, any record that is inserted or updated in the Registry is validated. Each field in the incoming record is validated using [Shaclex Validator](http://labra.weso.es/shaclex/){:target="_blank"}. This validator is build using Scala and it is capable of validating [RDF](https://www.w3.org/RDF/){:target="_blank"} data.
+Data validation is a key part of every application. An application should be capable of verifying the data that is sent to it. After verifying the data, if the data is valid, it should allow the request to be processed and if not, respond with an appropriate message. Currently in OpenSaber, any record that is inserted or updated in the Registry is validated. Each field in the incoming record is validated using [Shaclex Validator](http://labra.weso.es/shaclex/){:target="_blank"}. This validator is build using Scala and it is capable of validating [RDF](https://www.w3.org/RDF/){:target="_blank"} data.
 
 ## Modelling Validations
 

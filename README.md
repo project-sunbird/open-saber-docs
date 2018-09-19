@@ -1,2 +1,2 @@
-# open-saber
-Documentation for the Open SABER (Software Archetype for Building Electronic Registries) project. 
+# OpenSaber
+Documentation for the OpenSaber project (Open Software Archetype for Building Electronic Registries) 

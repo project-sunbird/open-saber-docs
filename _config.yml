@@ -1,6 +1,6 @@
 title: OpenSaber
 url: "http://docs.opensaber.io/"
-baseurl:
+baseurl:"/"
 google_analytics_key:
 disqus_shortname:
 newsletter_action:

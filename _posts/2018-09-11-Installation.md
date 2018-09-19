@@ -8,7 +8,7 @@ showSidebar: true
 published: true
 nav_ordering: 3
 pageTitle: OpenSaber Installation
-desc: Steps to install Opensaber Registry.
+desc: Steps to install OpenSaber Registry.
 ---
 
 ## Prerequisites

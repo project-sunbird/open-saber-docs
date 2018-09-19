@@ -16,7 +16,7 @@
 						{% if tutorial.showSidebar %}
 						{% if tutorial.published %}
 						<li {% if tutorial.url == page.url %}class="active"{% endif %}>
-							<a href="{{ site.baseurl }}{{ tutorial.url }}">{{ tutorial.title }}</a>
+							<a href="{{ tutorial.url }}">{{ tutorial.title }}</a>
 						</li>
 						{% endif %}
 						{% endif %}

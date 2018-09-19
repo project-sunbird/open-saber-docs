@@ -4,8 +4,8 @@ title: Middleware Design
 categories:
   - Documentation
 type: Document
-showSidebar: true
-published: true
+showSidebar: false
+published: false
 nav_ordering: 2
 pageTitle: "Middleware Design"
 ---

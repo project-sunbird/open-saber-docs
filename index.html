@@ -9,24 +9,28 @@
 			{% assign posts = category[1] %}
 			{% assign size = posts | size %}
 			<section class="category">
-				
 				<!--<h3>
 					{{ name | replace: "-", " "}}
 				</h3>-->
-				<ul>
+				<div class="cat-pages row">
 					{% assign tutorials = posts |  sort: "nav_ordering" %}
 					{% for tutorial in tutorials%}
 						{% if tutorial.showSidebar %}
 						{% if tutorial.published %}
-							<li>
-								<a href="{{ site.baseurl }}{{ tutorial.url }}" class="cat-title">
-									{% include document-icon.html icon=tutorial.type %}<span >{{ tutorial.title }}</span>
-								</a>
-							</li>
+							<div class="cat-page col-12 col-sm-4 p-4">
+								
+								<span class="cat-meta">
+									<a href="{{ site.baseurl }}{{ tutorial.url }}" class="cat-title"> 
+										<span class="icon">{% include document-icon.html icon=tutorial.type %} </span>
+										<span class="title">{{ tutorial.title }}</span>
+									</a>
+									<span>{{ tutorial.desc }}</span>
+								</span>
+							</div>
 						{% endif %}
 						{% endif %}
 					{% endfor %}
-				</ul>
+				</div>
 			</section>
 		{% endfor %}
 	</section>

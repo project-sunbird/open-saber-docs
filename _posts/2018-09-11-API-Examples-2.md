@@ -4,8 +4,8 @@ title: API Examples
 categories:
   - Documentation
 type: Document
-showSidebar: true
-published: true
+showSidebar: false
+published: false
 nav_ordering: 15
 pageTitle: "API Examples"
 ---

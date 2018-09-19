@@ -4,8 +4,8 @@ title: Authentication
 categories:
   - Documentation
 type: Document
-showSidebar: true
-published: true
+showSidebar: false
+published: false
 nav_ordering: 9
 pageTitle: "Authentication"
 ---

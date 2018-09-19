@@ -4,8 +4,8 @@ title: Generate authentication token for accessing APIs
 categories:
   - Documentation
 type: Document
-showSidebar: true
-published: true
+showSidebar: false
+published: false
 nav_ordering: 14
 pageTitle: "Generate authentication token for accessing APIs"
 ---

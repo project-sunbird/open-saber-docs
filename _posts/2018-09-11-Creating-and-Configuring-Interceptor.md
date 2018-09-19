@@ -4,8 +4,8 @@ title: Creating and Configuring Interceptor
 categories:
   - Documentation
 type: Document
-showSidebar: true
-published: true
+showSidebar: false
+published: false
 nav_ordering: 11
 pageTitle: "Creating and Configuring Interceptor"
 ---

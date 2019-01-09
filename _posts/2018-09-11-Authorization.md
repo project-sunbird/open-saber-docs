@@ -32,10 +32,10 @@ nonce: ,      # with a nonce the consent can only be used once
 
 Nothing is accessible without Consent. So, if by chance, all consent artifacts are deleted, instead of opening up, the Registry will be closed for access. Also, one cannot delete a Consent but can only end date it.
 
-Roles can be simply understood as a way to connect a group of users to consent. Role would already be setup externally in the Authentication mechanism. Open Saber would expect the User and Role imformation to be present in the JWT as per the OpenID Connect Flow.
+Roles can be simply understood as a way to connect a group of users to consent. Role would already be setup externally in the Authentication mechanism. OpenSABER would expect the User and Role imformation to be present in the JWT as per the OpenID Connect Flow.
 
 ## Ownership assignment
-Following diagram explains how field ownership mappings are dynamically managed. Since, OpenSaber vocabulary is extendable, it would be hard to setup ownership everytime a new field is introduced. Rather than that, a combination of consent and simple workflow, would assign ownership of record level fields.
+Following diagram explains how field ownership mappings are dynamically managed. Since, OpenSABER vocabulary is extendable, it would be hard to setup ownership everytime a new field is introduced. Rather than that, a combination of consent and simple workflow, would assign ownership of record level fields.
 
 [![Ownership assignment](/images/ownership-assignment.png)](/images/ownership-assignment.png){:target="_blank"}
 

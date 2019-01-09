@@ -10,7 +10,7 @@ nav_ordering: 15
 pageTitle: "API Examples"
 ---
 
-### Open Saber API Examples
+### OpenSABER API Examples
 
 #### 1. Create 
 

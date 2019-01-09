@@ -15,9 +15,9 @@ We can look at application authentication to be largely falling into the followi
 1. Local Authentication, where the user and credentials are managed local to the application.
 2. Identity Provider (IdP) based Authentication, where the authentication is done by a separate Provider and user credentials are not stored in the Application.
 
-OpenSaber APIs would need a client to make calls on behalf of the user. The client could be a server, a mobile app, javascript on a single page app, a command line utility, etc.
+OpenSABER APIs would need a client to make calls on behalf of the user. The client could be a server, a mobile app, javascript on a single page app, a command line utility, etc.
 
-Let's talk about the IdP case first, where we will talk about how to integrate OpenSaber in an existing system which has an IdP.
+Let's talk about the IdP case first, where we will talk about how to integrate OpenSABER in an existing system which has an IdP.
 
 ### via App in the same domain
 

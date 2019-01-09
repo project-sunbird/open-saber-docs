@@ -11,7 +11,7 @@ pageTitle: "Generate authentication token for accessing APIs"
 ---
 
 ## Steps to generate auth-token
- Following are the steps to authenticate a user when the user is supposed to access any opensaber APIs.
+ Following are the steps to authenticate a user when the user is supposed to access any OpenSABER APIs.
 
 `Step 1 `:  Set environment variables
  ```bash
@@ -33,4 +33,4 @@ sunbird_sso_client_id=admin-cli
 curl -X POST https://dev.open-sunbird.org/auth/realms/sunbird/protocol/openid-connect/token -H 'cache-control: no-cache' -H 'content-type: application/x-www-form-urlencoded' -d 'client_id=admin-cli&username=******&password=******&grant_type=password'
 ```
 
-`Step 3`: While accessing any API of opensaber registry, use the value of "**access-token**" from step 2 along with key as "**x-authenticated-user-token**"  in HTTP header.
+`Step 3`: While invoking any API of OpenSABER, use the value of "**access-token**" from step 2 along with key as "**x-authenticated-user-token**"  in HTTP header.

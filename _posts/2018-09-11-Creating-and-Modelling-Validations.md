@@ -29,3 +29,18 @@ To quickly understand these schema files in detail, we suggest you take a look a
 For more details, look at validation [specification](https://datatracker.ietf.org/doc/draft-handrews-json-schema-validation/)
 
 For a quick and easy schema generation, supply an example payload to this [online schema generator](http://jsonschema.net/) and it will create a rough schema for you.
+
+You can additionally decorate the schema specific to OpenSABER in the following way. This can be found in the reference example - [Teacher schema](https://github.com/project-sunbird/open-saber/tree/master/java/registry/src/main/resources/public/_schemas/Teacher.json)
+  
+```{
+"_osConfig": {
+         "osComment": ["This section contains the OpenSABER specific configuration information", 
+                      "privateFields: Optional; list of field names to be encrypted and stored in database", 
+                      "signedFields: Optional; list of field names that must be pre-signed",
+                      "indexFields: Optional; list of field names used for creating index",
+                      "uniqueIndexFields: Optional; list of field names used for creating unique index. Field names must be different from index field name"],                     
+         "privateFields": ["nationalIdentifier", "teacherCode", "birthDate"],
+         "signedFields": ["serialNum"],
+         "indexFields": ["nationalIdentifier"],
+         "uniqueIndexFields": ["serialNum"]  
+}

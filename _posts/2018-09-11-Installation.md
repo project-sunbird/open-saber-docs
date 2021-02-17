@@ -1,5 +1,5 @@
 ---
-date: 2018-09-10
+date: 2021-02-17
 title: Installation
 categories:
   - Documentation
@@ -20,9 +20,21 @@ desc: Steps to install OpenSABER Registry.
 ```sh
 git clone https://github.com/project-sunbird/open-saber.git
 cd open-saber
-sh configure-dependencies.sh
+sh configure-dependencies.sh <default_schema>
+
 ```
+NOTE:*- default_schema can be either true if you want to use existing sample schema or false to create your own schema definitions.
+
 CAUTION: This installs the default configuration. Please create your own definitions in separate files (not in the default files) to prevent inadvertent over-writes.
+
+### Database Configuration
+Database can be configured in the generated application.yml, update the connectionInfo properties for the same.
+Sample Postgresql configuration is available to use postgres connection,to use the default connection create a database 'opensaberdb' and update the postgres user and password:
+```
+uri: ${connectionInfo_uri:jdbc:postgresql://localhost:5432/opensaberdb}
+username: ${connectionInfo_username:postgres}
+password: ${connectionInfo_password:opensaberdb}
+```
 
 #### Build and install 
 ```sh

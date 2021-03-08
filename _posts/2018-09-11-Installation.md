@@ -103,10 +103,6 @@ Below mentioned configuration files should be created in [src/main/resources](ht
 
 3. **schema-configuration.json** - This file contain schema level configurations. We like to make this at one place, along with the definition itself in future. Further details can be found in [schema-configuration.jsonld.sample](https://github.com/project-sunbird/open-saber/blob/master/java/registry/src/main/resources/schema-configuration.jsonld.sample).
     
-4. **frame.json** - This file is useful to frame the JSONLD output so that all the facts are nested instead of being flatly presented. This helps in readability. You may ignore if you're not interested in Linked Data. [frame.json.sample](https://github.com/project-sunbird/open-saber/blob/master/java/registry/src/main/resources/frame.json.sample) contains short-hand names, their namespaces and the the primary type used throughout the JSON-LD document that is issued into the registry. We expect to make subtle changes to help adopters embrace this technology conveniently. There is some work pending to simplify this.
-
-5. **audit_frame.json** - If audit is enabled in application.yml, this file is useful to frame the audit records so that all the facts are nested instead of being flatly presented. [audit_frame.json.sample](https://github.com/project-sunbird/open-saber/blob/master/java/registry/src/main/resources/audit_frame.json.sample) contains short-hand names, and their namespaces used throughout the audit record that is issued into the registry.
-
 
 #### Property Configurations in Detail
 
@@ -116,43 +112,37 @@ The following is a list of configuration options which can be tailored for a spe
 
 2. **registry_context_base** - The primary namespace IRI of the registry instance. It will default to `http://localhost:8080/`.
 
-3. **registry_system_base** - The namespace IRI for audit records. This will default to `http://localhost:8080/opensaber`.
+3. **config_schema_file** - The fully qualified filename with the `file://` protocol prefix for configuring fields that need to be encrypted. The default filename will be `schema-configuration.jsonld` and will be loaded from the classpath. This file will be in JSON-LD format.
 
-4. **config_schema_file** - The fully qualified filename with the `file://` protocol prefix for configuring fields that need to be encrypted. The default filename will be `schema-configuration.jsonld` and will be loaded from the classpath. This file will be in JSON-LD format.
+4. **database** - The storage database provider for the OpenSABER instance. The default database will be `NEO4J`. Refer to application.yml for more details.
 
-5. **database** - The storage database provider for the OpenSABER instance. The default database will be `NEO4J`. Refer to application.yml for more details.
+5. **connection_timeout** - Encryption service connection timeout in milliseconds.
 
-6. **frame_file** - The Full qualified filename with the `file://` protocol prefix for framing a record read from the database. The default value will be `frame.json` and will be loaded from the classpath. For further details, you can refer to [understanding configuration files](#Understanding-Configuration-Files) above.
+6. **connection_request_timeout** - Encryption service connection request timeout in milliseconds.
 
-7. **connection_timeout** - Encryption service connection timeout in milliseconds.
+7. **read_timeout** - Encryption service socket read timeout in milliseconds.
 
-15. **connection_request_timeout** - Encryption service connection request timeout in milliseconds.
+8. **encryption_enabled** - Toggle for enabling/disabling encryption.
 
-8. **read_timeout** - Encryption service socket read timeout in milliseconds.
+9. **encryption_base** - The base URL for encryption/decryption service.
 
-9. **encryption_enabled** - Toggle for enabling/disabling encryption.
+10. **encryption_uri** - The fully qualified URI for encrypting data.
 
-10. **encryption_base** - The base URL for encryption/decryption service.
+11. **encryption_batch_uri** - The fully qualified URL to encrypt data in batch mode.
 
-11. **encryption_uri** - The fully qualified URI for encrypting data.
+12. **decryption_uri** - The fully qualified URI for decrypting data.
 
-12. **encryption_batch_uri** - The fully qualified URL to encrypt data in batch mode.
+13. **decryption_batch_uri** - The fully qualified URL to decrypt data in batch mode.
 
-13. **decryption_uri** - The fully qualified URI for decrypting data.
+14. **audit_enabled** - Toggle to enable/disable internal audit. The audit records will be stored as part of the primary database.
 
-14. **decryption_batch_uri** - The fully qualified URL to decrypt data in batch mode.
+15. **authentication_enabled** - Toggle to enable/disable authentication. The authentication is disabled by default. The default authentication provider is the Sunbird Keycloak service.
 
-15. **audit_enabled** - Toggle to enable/disable internal audit. The audit records will be stored as part of the primary database.
+16. **sunbird_sso_publickey** - The public key of the Sunbird Keycloak authentication service.
 
-16. **audit_frame_file** - The fully qualified filename with the `file://` protocol prefix for framing an audit record read from the database. The default value will be `audit_frame.json` and will be loaded from the classpath. For further details, you can refer to [understanding configuration files](#Understanding-Configuration-Files) above.
+17. **sunbird_sso_realm** - The SSO realm of the Sunbird Keycloak authentication service.
 
-17. **authentication_enabled** - Toggle to enable/disable authentication. The authentication is disabled by default. The default authentication provider is the Sunbird Keycloak service.
-
-18. **sunbird_sso_publickey** - The public key of the Sunbird Keycloak authentication service.
-
-19. **sunbird_sso_realm** - The SSO realm of the Sunbird Keycloak authentication service.
-
-20. **sunbird_sso_url** - The fully qualified URL of the authentication service.
+18. **sunbird_sso_url** - The fully qualified URL of the authentication service.
 
 
 #### Understanding the Vocabulary File

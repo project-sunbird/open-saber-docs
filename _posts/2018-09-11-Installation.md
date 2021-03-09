@@ -20,6 +20,7 @@ desc: Steps to install OpenSABER Registry.
 ```sh
 git clone https://github.com/project-sunbird/open-saber.git
 cd open-saber
+mkdir java/registry/src/main/resources/public/_schemas              
 sh configure-dependencies.sh <default_schema>
 
 ```
